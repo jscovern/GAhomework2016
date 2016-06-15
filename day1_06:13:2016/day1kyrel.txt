@@ -1,0 +1,64 @@
+## INTRODUCTION TO COMMANDS
+
+
+1. turn_3rd_cell_blue - [solution](/challenges/solutions/turn_3rd_cell_blue.js)
+
+  * start:  ['.', '.', '.', '.', '.']
+  * finish: ['.', .', 'b', '.', '.']
+
+
+var initial_state = ['.', '.', '.', '.', '.']
+
+function main(n) {
+
+  //////////////////////////////////
+  ////                          ////
+  //// v YOUR CODE BELOW HERE v ////
+  ////                          ////
+  //////////////////////////////////
+
+moveRight();
+moveRight();
+useBlue();
+
+  //////////////////////////////////
+  ////                          ////
+  //// ^ YOUR CODE ABOVE HERE ^ ////
+  ////                          ////
+  //////////////////////////////////
+
+} // END MAIN
+
+
+
+
+
+2. erase_3rd_cell - [solution](/challenges/solutions/erase_3rd_cell.js)
+
+  * start:  ['b', 'b', 'b', 'b', 'b']
+  * finish: ['b', 'b', '.', 'b', 'b']
+
+  
+
+var initial_state = ['b', 'b', 'b', 'b', 'b']
+
+function main(n) {
+
+  //////////////////////////////////
+  ////                          ////
+  //// v YOUR CODE BELOW HERE v ////
+  ////                          ////
+  //////////////////////////////////
+
+moveRight();
+moveRight();
+erase();
+
+  //////////////////////////////////
+  ////                          ////
+  //// ^ YOUR CODE ABOVE HERE ^ ////
+  ////                          ////
+  //////////////////////////////////
+
+} // END MAIN
+
