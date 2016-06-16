@@ -1,0 +1,245 @@
+## BASIC FOR LOOPS & CONDITIONALS
+
+
+
+
+1. all_blue - [solution](/challenges/solutions/all_blue.js)
+
+  * start:  ['.', '.', '.', '.', '.']
+  * finish: ['b', 'b', 'b', 'b', 'b']
+
+
+var initial_state = ['.', '.', '.', '.', '.']
+
+function main(n) {
+
+  //////////////////////////////////
+  ////                          ////
+  //// v YOUR CODE BELOW HERE v ////
+  ////                          ////
+  //////////////////////////////////
+
+    useBlue();
+    draw();
+    moveRight();
+    draw();
+    moveRight();
+    draw();
+    moveRight();
+    draw();
+    moveRight();
+    draw();
+
+  //////////////////////////////////
+  ////                          ////
+  //// ^ YOUR CODE ABOVE HERE ^ ////
+  ////                          ////
+  //////////////////////////////////
+
+} // END MAIN
+
+
+
+
+
+
+
+
+2. all_first_color - [solution](/challenges/solutions/all_first_color.js)
+
+  * start:  ['b', '.', '.', '.', '.']
+  * finish: ['b', 'b', 'b', 'b', 'b']
+
+  * start:  ['g', '.', '.', '.', '.']
+  * finish: ['g', 'g', 'g', 'g', 'g']
+
+
+var initial_state =['b', '.', '.', '.', '.']
+
+function main(n) {
+
+  //////////////////////////////////
+  ////                          ////
+  //// v YOUR CODE BELOW HERE v ////
+  ////                          ////
+  //////////////////////////////////
+
+   if (onBlue()) {
+    useBlue()
+} else if (onGreen()) {
+    useGreen();
+}
+
+    for (var j=0; j<5; j++) {
+        draw();
+        moveRight();
+    }
+       
+  //////////////////////////////////
+  ////                          ////
+  //// ^ YOUR CODE ABOVE HERE ^ ////
+  ////                          ////
+  //////////////////////////////////
+
+} // END MAIN
+
+
+
+
+
+
+
+3. n_in_a_row - [solution](/challenges/solutions/n_in_a_row.js)
+
+  * start:  ['.', '.', '.', '.', '.']
+  * finish: ['b', 'b', '.', '.', '.']  \(given n is 2)
+  * finish: ['b', 'b', 'b', '.', '.']  \(given n is 3)
+
+var initial_state = ['.', '.', '.', '.', '.']
+
+function main(n) {
+
+  //////////////////////////////////
+  ////                          ////
+  //// v YOUR CODE BELOW HERE v ////
+  ////                          ////
+  //////////////////////////////////
+
+   var n = 2; // var n = 3;
+
+useBlue();
+for(var i=0; i<n; i++) {
+  draw();
+  moveRight();
+}
+      
+  //////////////////////////////////
+  ////                          ////
+  //// ^ YOUR CODE ABOVE HERE ^ ////
+  ////                          ////
+  //////////////////////////////////
+
+} // END MAIN
+
+
+
+
+
+
+
+
+
+
+
+4. every_even_erase - [solution](/challenges/solutions/every_even_erase.js)
+
+  * start:  ['b', 'b', 'b', 'b', 'b']
+  * finish: ['.', 'b', '.', 'b', '.']
+
+
+
+var initial_state =  ['b', 'b', 'b', 'b', 'b']
+
+function main(n) {
+
+  //////////////////////////////////
+  ////                          ////
+  //// v YOUR CODE BELOW HERE v ////
+  ////                          ////
+  //////////////////////////////////
+
+   for(var i=0; i<5; i++){
+    if ( i%2 === 0 ){
+        erase();
+    }
+    moveRight();
+}
+   
+  //////////////////////////////////
+  ////                          ////
+  //// ^ YOUR CODE ABOVE HERE ^ ////
+  ////                          ////
+  //////////////////////////////////
+
+} // END MAIN
+
+
+
+
+  
+5. every_odd_erase - [solution](/challenges/solutions/every_odd_erase.js)
+
+  * start:  ['b', 'b', 'b', 'b', 'b']
+  * finish: ['b', '.', 'b', '.', 'b']
+
+
+
+var initial_state =  ['b', 'b', 'b', 'b', 'b']
+
+function main(n) {
+
+  //////////////////////////////////
+  ////                          ////
+  //// v YOUR CODE BELOW HERE v ////
+  ////                          ////
+  //////////////////////////////////
+
+   for(var i=0; i<5; i++){
+    if ( i%2 !== 0 ){
+        erase();
+    }
+    moveRight();
+}   
+    
+  //////////////////////////////////
+  ////                          ////
+  //// ^ YOUR CODE ABOVE HERE ^ ////
+  ////                          ////
+  //////////////////////////////////
+
+} // END MAIN
+
+
+
+
+  
+6. every_n_erase - [solution](/challenges/solutions/every_n_erase.js)
+
+  * start:  ['b', 'b', 'b', 'b', 'b']
+  * finish: ['.', '.', '.', '.', '.'] // (given n is 1)
+  * finish: ['b', '.', 'b', '.', 'b'] // (given n is 2)
+  * finish: ['b', 'b', 'b', 'b', '.'] // (given n is 5)
+
+
+
+
+var initial_state =  ['b', 'b', 'b', 'b', 'b']
+
+function main(n) {
+
+  //////////////////////////////////
+  ////                          ////
+  //// v YOUR CODE BELOW HERE v ////
+  ////                          ////
+  //////////////////////////////////
+
+n = 1; // n = 2; n = 5;
+
+for(var i=0; i<5; i++){
+    if ( (i+1)%n === 0 ){
+        erase();
+    }
+    moveRight();
+} 
+    
+  //////////////////////////////////
+  ////                          ////
+  //// ^ YOUR CODE ABOVE HERE ^ ////
+  ////                          ////
+  //////////////////////////////////
+
+} // END MAIN
+
+
+
+
