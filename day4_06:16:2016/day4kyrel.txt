@@ -1,0 +1,135 @@
+## ADVANCED LOOPS & CONDITIONALS
+
+1. bleed_right - [solution](/challenges/solutions/bleed_right.js)
+
+  * start:  ['.', '.', 'b', '.', '.']
+  * finish: ['.', '.', 'b', 'b', 'b']
+
+
+var initial_state = ['.', '.', 'b', '.', '.']
+
+function main(n) {
+
+//////////////////////////////////
+////                          ////
+//// v YOUR CODE BELOW HERE v ////
+////                          ////
+//////////////////////////////////
+
+for(var j=0; j<5; j++) {
+if ( onBlue() ) {
+useBlue()
+} else if ( onGreen() ) {
+useGreen();
+} else {
+draw();
+}
+moveRight();
+}
+
+//////////////////////////////////
+////                          ////
+//// ^ YOUR CODE ABOVE HERE ^ ////
+////                          ////
+//////////////////////////////////
+
+} // END MAIN
+
+
+
+
+2. invert_colors - [solution](/challenges/solutions/invert_colors.js)
+
+  * start:  ['b', 'g', 'g', 'b', 'b']
+  * finish: ['g', 'b', 'b', 'g', 'g']
+
+  * start:  ['b', '.', 'g', '.', 'b']
+  * finish: ['g', '.', 'b', '.', 'g']
+
+
+
+var initial_state = ['b', 'g', 'g', 'b', 'b']
+
+function main(n) {
+
+//////////////////////////////////
+////                          ////
+//// v YOUR CODE BELOW HERE v ////
+////                          ////
+//////////////////////////////////
+
+for(var j=0; j<5; j++) {
+if( onBlue() ) {
+useGreen();
+draw(); // overwrite
+} else if( onGreen() ) {
+useBlue();
+draw(); // overwrite
+}
+
+moveRight();
+}
+
+//////////////////////////////////
+////                          ////
+//// ^ YOUR CODE ABOVE HERE ^ ////
+////                          ////
+//////////////////////////////////
+
+} // END MAIN
+
+
+
+
+
+3. reverse_row - [solution](/challenges/solutions/reverse_row.js)
+
+  * start:  ['b', 'g', 'g', '.', 'g']
+  * finish: ['g', '.', 'g', 'g', 'b']
+
+
+
+var initial_state = ['b', 'g', 'g', '.', 'g']
+
+
+function main(n) {
+
+//////////////////////////////////
+////                          ////
+//// v YOUR CODE BELOW HERE v ////
+////                          ////
+//////////////////////////////////
+
+var myRow = [];
+
+for(var i=0; i<5; i++){
+if ( onBlue() ) {
+myRow.push('blue')
+} else if ( onGreen() ) {
+myRow.push('green')
+} else {
+myRow.push('.')
+}
+moveRight();
+}
+
+myRow.forEach(function(color){
+if ( color === "blue" ) {
+useBlue();
+draw();
+} else if ( color === "green" ) {
+useGreen();
+draw();
+} else {
+erase();
+}
+moveLeft();
+})
+
+//////////////////////////////////
+////                          ////
+//// ^ YOUR CODE ABOVE HERE ^ ////
+////                          ////
+//////////////////////////////////
+
+} // END MAIN
