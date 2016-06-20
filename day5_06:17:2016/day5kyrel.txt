@@ -1,0 +1,162 @@
+## MORE LOOPS & CONDITIONALS
+
+1. move_the_blue_dot_one_to_the_right - [solution](/challenges/solutions/move_the_blue_dot_one_to_the_right.js)
+
+  * start:  ['.', '.', 'b', '.', '.']
+  * finish: ['.', '.', '.', 'b', '.']
+  
+  * start:  ['g', 'b', '.', '.', 'g']
+  * finish: ['g', '.', 'b', '.', 'g']
+
+
+var initial_state =  ['.', '.', 'b', '.', '.']
+
+function main(n) {
+
+//////////////////////////////////
+////                          ////
+//// v YOUR CODE BELOW HERE v ////
+////                          ////
+//////////////////////////////////
+
+for(var j=0; j<5; j++) {
+if( onBlue() ) {
+erase();
+moveRight();
+useBlue();
+draw();
+}
+
+moveRight();
+}
+
+//////////////////////////////////
+////                          ////
+//// ^ YOUR CODE ABOVE HERE ^ ////
+////                          ////
+//////////////////////////////////
+
+} // END MAIN
+
+
+  
+2. delete_before - [solution](/challenges/solutions/delete_before.js)
+
+  * start:  [ 'g', 'b', '.', '.', '.' ]
+  * finish: [ '.', 'b', '.', '.', '.' ]
+
+  * start:  [ 'g', 'b', 'b', '.', '.' ]
+  * finish: [ '.', '.', 'b', '.', '.' ]
+
+
+var initial_state =   [ 'g', 'b', '.', '.', '.' ]
+
+
+function main(n) {
+
+//////////////////////////////////
+////                          ////
+//// v YOUR CODE BELOW HERE v ////
+////                          ////
+//////////////////////////////////
+
+for(var j=0; j<5; j++) {
+if ( onBlue() ) {
+moveLeft();
+erase();
+moveRight();
+}
+moveRight();
+}
+//////////////////////////////////
+////                          ////
+//// ^ YOUR CODE ABOVE HERE ^ ////
+////                          ////
+//////////////////////////////////
+
+} // END MAIN
+
+
+
+3. pull_blues_right - [solution](/challenges/solutions/pull_blues_right.js)
+ 
+  * start:  ['b', '.', 'b', '.', '.']
+  * finish: ['.', '.', '.', 'b', 'b']
+
+var initial_state = ['b', '.', 'b', '.', '.']
+
+
+function main(n) {
+
+//////////////////////////////////
+////                          ////
+//// v YOUR CODE BELOW HERE v ////
+////                          ////
+//////////////////////////////////
+
+var blues = 0;
+for(var i=0; i<4; i++){
+if ( onBlue() ) {
+blues++
+}
+erase();
+moveRight();
+}
+
+useBlue();
+while(blues--){
+draw();
+moveLeft();
+}
+//////////////////////////////////
+////                          ////
+//// ^ YOUR CODE ABOVE HERE ^ ////
+////                          ////
+//////////////////////////////////
+
+} // END MAIN
+
+ 
+4. pull_blues_left - [solution](/challenges/solutions/pull_blues_left.js)
+ 
+  * start:  [ '.', 'b', 'b', '.', 'b' ]
+  * finish: [ 'b', 'b', 'b', '.', '.' ]
+
+
+var initial_state = [ '.', 'b', 'b', '.', 'b' ]
+
+
+function main(n) {
+
+//////////////////////////////////
+////                          ////
+//// v YOUR CODE BELOW HERE v ////
+////                          ////
+//////////////////////////////////
+
+var numBlues = 0;
+useBlue();
+
+for(var j = 0; j < 5; j++) {
+if(onBlue()) {
+numBlues = numBlues + 1;
+}
+draw(); 
+moveRight();
+}
+
+console.log(numBlues);
+
+for(var i = 0; i < (5 - numBlues); i++) {
+erase();
+moveLeft();
+}
+//////////////////////////////////
+////                          ////
+//// ^ YOUR CODE ABOVE HERE ^ ////
+////                          ////
+//////////////////////////////////
+
+} // END MAIN
+
+
