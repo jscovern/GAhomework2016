@@ -1,1 +1,35 @@
-object : reset button
+OBJECT: RESTART BUTTON ON TIC TAC TOE BOARD
+
+
+CODE BEFORE:
+$("#reset").click(function () {
+        $("#game li").text("+");
+        $("#game li").removeClass('disable')
+        $("#game li").removeClass('o')
+        $("#game li").removeClass('x')
+        $("#game li").removeClass('btn-primary')
+        $("#game li").removeClass('btn-info')
+        count = 0
+
+    });
+    
+    
+    
+    
+    
+    
+    CODE AFTER CONSTRUCTOR :
+    function Reset(){
+        $("#game li").text("+");
+        $("#game li").removeClass('disable');
+        $("#game li").removeClass('o');
+        $("#game li").removeClass('x');
+        $("#game li").removeClass('btn-primary');
+        $("#game li").removeClass('btn-info');
+        count = 0;
+    }      
+    
+    $("#reset").click(function() {
+        
+        Reset();
+    });
